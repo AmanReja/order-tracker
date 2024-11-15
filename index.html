@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track order</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <h2 style="text-align: center">Track Your Order</h2>
+    <form onsubmit="addData(),event.preventDefault()" class="form-container">
+      <input required id="name" type="text" placeholder="Enter your name" />
+      <input
+        required
+        id="order"
+        type="text"
+        placeholder="Enter your order Id"
+      />
+      <input
+        required
+        id="contact"
+        type="text"
+        placeholder="Enter your contact"
+      />
+      <input
+        required
+        id="address"
+        type="text"
+        placeholder="Enter your address"
+      />
+      <button id="add" type="submit" class="gBtn">Add Tracker</button>
+    </form>
+    <table class="table">
+      <thead>
+        <th>Name</th>
+        <th>Order id</th>
+        <th>Contact</th>
+        <th>Address</th>
+        <th>Action</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script src="./sctipt.js"></script>
+  </body>
+</html>
