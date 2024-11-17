@@ -4,6 +4,12 @@ const contact = document.querySelector("#contact");
 const address = document.querySelector("#address");
 const add = document.querySelector("#add");
 const order = document.querySelector("#order");
+const selectedOpt = document.querySelector("#status");
+// const option = document.getElementsByTagName("option");
+
+// function oStatus() {
+
+// }
 
 function addData() {
   var row = tBody.insertRow(0);
@@ -12,13 +18,18 @@ function addData() {
   var cell3 = row.insertCell(2);
   var cell4 = row.insertCell(3);
   var cell5 = row.insertCell(4);
+  // var cell6 = row.insertCell(5);
+
+  str = selectedOpt.value;
+  console.log(str);
 
   //   cell5.appendChild(row.index);
 
-  cell1.innerHTML = name.value;
+  cell1.innerHTML = `${name.value} <strong>Status</strong> ${str}`;
   cell2.innerHTML = order.value;
   cell3.innerHTML = contact.value;
   cell4.innerHTML = address.value;
+  // cell5.innerHTML = str.value;
 
   var button = document.createElement("button");
   var button2 = document.createElement("button");
@@ -87,13 +98,3 @@ function addData() {
   address.value = "";
   order.value = "";
 }
-
-// function saveData() {
-//   localStorage.setItem("data", tBody.innerHTML);
-// }
-
-// function shoTask() {
-//   tBody.innerHTML = localStorage.getItem("data");
-// }
-
-// shoTask();

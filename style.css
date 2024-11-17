@@ -44,3 +44,8 @@ table {
     left: 12px;
    
   }
+  .status-container{
+    position: relative;
+    /* left: 25%; */
+    margin-top: 12px;
+  }

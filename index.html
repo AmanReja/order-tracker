@@ -9,7 +9,12 @@
 
   <body>
     <h2 style="text-align: center">Track Your Order</h2>
-    <form onsubmit="addData(),event.preventDefault()" class="form-container">
+    <form
+      name="form"
+      id="form"
+      onsubmit="addData(),event.preventDefault()"
+      class="form-container"
+    >
       <input required id="name" type="text" placeholder="Enter your name" />
       <input
         required
@@ -29,8 +34,20 @@
         type="text"
         placeholder="Enter your address"
       />
+
+      <div class="status-container">
+        <label for="">Order Status:</label>
+        <select required name="status" id="status">
+          <!-- <option value=""></option> -->
+          <option value="In transit">In transit</option>
+          <option value="Shipment scheduled">Shipment scheduled</option>
+          <option value="Delivered">Delivered</option>
+          <option value="Delivery Attempted">Delivery Attempted</option>
+        </select>
+      </div>
       <button id="add" type="submit" class="gBtn">Add Tracker</button>
     </form>
+
     <table class="table">
       <thead>
         <th>Name</th>
