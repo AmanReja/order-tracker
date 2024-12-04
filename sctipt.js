@@ -20,16 +20,16 @@ function addData() {
   var cell5 = row.insertCell(4);
   // var cell6 = row.insertCell(5);
 
-  str = selectedOpt.value;
+  let str = selectedOpt.value;
   console.log(str);
 
   //   cell5.appendChild(row.index);
 
-  cell1.innerHTML = `${name.value} <strong>Status</strong> ${str}`;
+  cell1.innerHTML = `${name.value}`;
   cell2.innerHTML = order.value;
   cell3.innerHTML = contact.value;
   cell4.innerHTML = address.value;
-  // cell5.innerHTML = str.value;
+  cell5.innerHTML = str;
 
   var button = document.createElement("button");
   var button2 = document.createElement("button");
@@ -92,9 +92,18 @@ function addData() {
     // cell2.remove(cell2);
     // cell3.remove(cell3);
     row.remove();
+    stor();
   });
   name.value = "";
   contact.value = "";
   address.value = "";
   order.value = "";
+  stor();
+}
+
+function stor() {
+  const aldata = {
+    tb: tBody.innerHTML
+  };
+  console.log(aldata);
 }
